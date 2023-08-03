@@ -7,7 +7,7 @@ CPPFLAGS = $(INCLUDEDIR)
 
 LDFLAGS	=
 
-LDLIBS	= -L$(ROOTSYS)/lib -L$(shell root-config --glibs)#-lCint -lRIO #-lNet -lHist -lGraf -lGraf3d -lGpad -lTree -lRint -lPostscript -lMatrix -lPhysics -lMat hCore -lThread -pthread -lm -ldl -rdynamic -lRooFit -lMinuit 
+LDLIBS	= -L$(ROOTSYS)/lib $(shell root-config --glibs)
 
 OBJS	= $(FILENAME).o
 
